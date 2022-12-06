@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kestwal Interview question</title>
+</head>
+<body>
+    <script>
+       
+       let user_input = prompt("Enter a number");
+let res = 0;
+let sum = 0;
+let arr = [];
+let flag = true; // Declare flag variable outside of the forEach callback
+document.write("fibonacci series "+"<br>");
+for(let i = 1; i<=user_input; i++){
+  res = res + i;
+  document.write(res + "<br>");
+  arr[i] = res;
+}
+
+arr.forEach((item) => { // Add closing curly bracket for the forEach callback
+  flag = true;
+  for(i = 2; i <= item / 2; i++){ // Check if the number is divisible by 1 and itself
+    if(item % i == 0){
+      flag = false;
+      
+    }
+  }
+  if(flag == true){
+    document.write(item + " is a prime number <br>")
+   return sum = sum + item;
+  }
+  
+}
+
+);
+document.write("The sum of prime no is: "+ sum);
+
+// return arr; // Return the array of prime numbers
+
+         
+    </script>
+</body>
+</html>
